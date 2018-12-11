@@ -14,10 +14,11 @@ public class PlayerController : MonoBehaviour
     private bool doubleJumped;
     public CanvasGroup canvasYouWin;
     private int lives = 3;
+    private Rigidbody2D rigidBody;
 
     void Start()
     {
-
+        rigidBody = GetComponent<Rigidbody2D>();
     }
 
     void FixedUpdate()
@@ -27,8 +28,8 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        var rigidBody = GetComponent<Rigidbody2D>();
-        var transform = GetComponent<Transform>();
+        // var rigidBody = GetComponent<Rigidbody2D>();
+        // var transform = GetComponent<Transform>();
         if (Input.GetKey("right"))
         {
             sprite.flipX = false;
